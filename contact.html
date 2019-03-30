@@ -6,7 +6,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
 <body class="is-preload">
@@ -24,40 +25,49 @@
                     <h2>Contact Me</h2>
                 </header>
 
-                <form>
-                    <form>
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="text" name="subject" placeholder="Subject" />
-                        </div>
-                        <div class="col-12">
-                            <textarea name="message" placeholder="Message" rows="6"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="name" placeholder="Name" />
-                        </div>
-                        <label class="col-12">Gender
-                            <label class="container">Male
-                                <input type="radio" name="radio" value="male">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Female
-                                <input type="radio" name="radio" value="female">
-                                <span class="checkmark"></span>
-                            </label>
-                        </label>
-                        <div class="col-12">
-                            <input type="text" name="phone" placeholder="Phone" />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="email" placeholder="Email" />
-                        </div>
-
-                        <div class="col-12">
-                            <input type="submit" value="Send" />
-                        </div>
+                <form id="contact-form" class="msg">
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control">
                     </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <input type="text" id="message" class="form-control" row="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="text" id="email" class="form-control">
+                    </div> <br>
+                    <input type="submit" value="Send" class="btn btn-block">
                 </form>
+
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="contact-list"></tbody>
+                </table>
+
             </article>
         </div>
 
